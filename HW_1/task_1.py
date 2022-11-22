@@ -15,3 +15,6 @@ True
 1
 False
 """
+
+weekday = int(input('Введите цифру от 1 до 7: '))
+print(5 < weekday < 8)
