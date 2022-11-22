@@ -10,3 +10,13 @@
 3
 x < 0, y < 0
 """
+
+point_coord = int(input('Введите номер четверти плоскости координат (1-4): '))
+if point_coord == 1:
+    print('x > 0, y > 0')
+elif point_coord == 2:
+    print('x < 0, y > 0')
+elif point_coord == 3:
+    print('x < 0, y < 0')
+else:
+    print('x > 0, y < 0')
