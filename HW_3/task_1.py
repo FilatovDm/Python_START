@@ -11,3 +11,9 @@
 [5, 1, 5, 2, 7, 11]
 14
 """
+
+list_nums = [1, 26, 1, 89, 1, 11, 1]
+sum_odd_ind = 0
+for i in range(0, len(list_nums), 2):
+    sum_odd_ind += list_nums[i]
+print(sum_odd_ind)
