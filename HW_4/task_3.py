@@ -13,12 +13,16 @@
 from random import randrange
 k = int(input('Введите значение k: '))
 polynomial = str(randrange(100)) + ' = 0'
+
 if k > 0:
-    polynomial = f'{randrange(100)}x + ' + polynomial
+    koef = randrange(100)
+    if koef != 0: polynomial = f'{koef}x + ' + polynomial
     for i in range(2, k + 1):
-        polynomial = f'{randrange(100)}x^{i} + ' + polynomial
+        koef = randrange(100)
+        if koef != 0:
+            polynomial = f'{koef}x^{i} + ' + polynomial
 
 print(polynomial)
 
-with open('polynomial.txt', 'w') as file:
+with open('polynomial_1.txt', 'w') as file:
     file.write(polynomial)
