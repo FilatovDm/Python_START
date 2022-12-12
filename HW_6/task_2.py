@@ -17,7 +17,7 @@
 from random import randrange
 
 size_list = int(input('Введите размер списка: '))
-rand_list = [1, 2, 3, 5, 1, 5, 3, 10] #[randrange(9) for i in range(size_list)]
+rand_list = [randrange(9) for i in range(size_list)]
 result_list1, result_list2, result_list3 = [], [], []
 print(rand_list)
 for i in range(size_list):
