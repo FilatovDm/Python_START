@@ -4,6 +4,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import bot_token
 import time
 
+#token = bot_token.token
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Привет, {update.effective_user.first_name}!\n'
@@ -24,7 +25,7 @@ async def input_bin(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Двоичное представление числа {print_num}: {int(double_num[::-1])}')
 
 
-app = ApplicationBuilder().token(bot_token.token).build()
+app = ApplicationBuilder().token(token).build()
 
 app.add_handler(CommandHandler("start", hello))
 app.add_handler(CommandHandler("bin", input_bin))
