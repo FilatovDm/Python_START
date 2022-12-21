@@ -4,7 +4,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import bot_token
 import time
 
-#token = bot_token.token
+token = bot_token.token
+
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Привет, {update.effective_user.first_name}!\n'
